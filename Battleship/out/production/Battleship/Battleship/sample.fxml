@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="714.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <GridPane id="enemyGrid" gridLinesVisible="true" layoutX="257.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="enemyButton00" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" />
+                <Button fx:id="enemyButton01" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="1" />
+                <Button fx:id="enemyButton02" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="2" />
+                <Button fx:id="enemyButton03" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="3" />
+                <Button fx:id="enemyButton04" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="4" />
+                <Button fx:id="enemyButton10" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.rowIndex="1" />
+                <Button fx:id="enemyButton11" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button fx:id="enemyButton12" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Button fx:id="enemyButton13" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Button fx:id="enemyButton14" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                <Button fx:id="enemyButton20" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.rowIndex="2" />
+                <Button fx:id="enemyButton21" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button fx:id="enemyButton22" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Button fx:id="enemyButton23" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Button fx:id="enemyButton24" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <Button fx:id="enemyButton30" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.rowIndex="3" />
+                <Button fx:id="enemyButton31" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Button fx:id="enemyButton32" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Button fx:id="enemyButton33" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <Button fx:id="enemyButton34" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                <Button fx:id="enemyButton40" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.rowIndex="4" />
+                <Button fx:id="enemyButton41" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Button fx:id="enemyButton42" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Button fx:id="enemyButton43" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Button fx:id="enemyButton44" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+        <GridPane id="playerGrid" gridLinesVisible="true" layoutX="257.0" layoutY="269.0" prefHeight="200.0" prefWidth="200.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="playerButton00" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" />
+                <Button fx:id="playerButton01" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="1" />
+                <Button fx:id="playerButton02" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="2" />
+                <Button fx:id="playerButton03" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="3" />
+                <Button fx:id="playerButton04" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="4" />
+                <Button fx:id="playerButton10" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.rowIndex="1" />
+                <Button fx:id="playerButton11" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button fx:id="playerButton12" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Button fx:id="playerButton13" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Button fx:id="playerButton14" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                <Button fx:id="playerButton20" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.rowIndex="2" />
+                <Button fx:id="playerButton21" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button fx:id="playerButton22" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Button fx:id="playerButton23" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Button fx:id="playerButton24" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <Button fx:id="playerButton30" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.rowIndex="3" />
+                <Button fx:id="playerButton31" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Button fx:id="playerButton32" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Button fx:id="playerButton33" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <Button fx:id="playerButton34" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                <Button fx:id="playerButton40" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.rowIndex="4" />
+                <Button fx:id="playerButton41" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Button fx:id="playerButton42" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Button fx:id="playerButton43" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Button fx:id="playerButton44" mnemonicParsing="false" prefHeight="42.0" prefWidth="40.0" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+        <Button id="startButton" fx:id="startButton" layoutX="285.0" layoutY="525.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="143.0" text="Start Game" />
+        <Label fx:id="display" layoutX="14.0" layoutY="72.0" prefHeight="177.0" prefWidth="239.0" text="Welcome to Salvo! Click the Start Game button to begin searching for an opponent!" wrapText="true">
+            <font>
+                <Font name="Arial" size="12.0" />
+            </font></Label>
+        <CheckBox fx:id="verticalCheckBox" alignment="CENTER" layoutX="506.0" layoutY="530.0" mnemonicParsing="false" text="Vertical Ship Placement" />
+        <Button fx:id="confirmShipPlacementButton" layoutX="285.0" layoutY="559.0" mnemonicParsing="false" text="Confirm Ship Placement" />
+        <Label layoutX="14.0" layoutY="355.0" prefHeight="233.0" prefWidth="194.0" text="Destroy all enemy ships to win! The first player to place their ships will be the first to go. If the game stops responding at any point, don't worry... It's just waiting on the other player!" wrapText="true">
+            <font>
+                <Font name="Arial" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="hitOrMiss" layoutX="528.0" layoutY="337.0" prefHeight="48.0" prefWidth="103.0" wrapText="true" />
+        <Label fx:id="hitDisplay" layoutX="522.0" layoutY="113.0" prefHeight="48.0" prefWidth="114.0" wrapText="true" />
+    </children>
+</AnchorPane>
