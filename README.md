@@ -1,5 +1,5 @@
 # Battleship
-An old battleship game I created in 2019. Uploading as an attempt to improve and revamp the game.
+An old battleship game I created in 2019. Uploading here as an attempt to improve and revamp the game.
 
 It was created in the IntelliJ Idea IDE alongside Gluon Scene Builder in the Java language, specifically JavaFX v11.0.5.
 
