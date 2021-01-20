@@ -1,8 +1,8 @@
 package Battleship;
 
 //*********************************************************************************************************************
-// Bryce Landry
-// Finish Date: 3/19/2020
+// Author: Bryce Landry
+// Initial Finish Date: 3/19/2020
 // This program acts as a server to the two corresponding client programs in order to host a game of salvo (battleship).
 // One client is referenced as the perpetrator, and one as the victim. This program handles all communications between
 // the two clients, acting as a middleman. It utilizes Java sockets on port 8088 to do this.
@@ -40,7 +40,7 @@ public class Main {
             FromPerpetrator fromperp = new FromPerpetrator(sock1, tovic);
             FromVictim fromvic = new FromVictim(sock2, toperp);
 
-            //Begin threads. Threads used to implement simultaneous communications.
+            //Begin threads. Threads used to implement simultaneous communication.
             new Thread(fromperp).start();
             new Thread(fromvic).start();
         }
