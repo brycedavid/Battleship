@@ -396,6 +396,7 @@ public class Controller implements Initializable, Runnable {
         new Thread(this).start();
     }
 
+    //This method handles all communications between the players and the server by sending messages. These messages are received from the other end.
     public void run(){
         String message;
         try{
@@ -480,7 +481,6 @@ public class Controller implements Initializable, Runnable {
                             enemyButtonArray[i][j].setVisible(false);
                         }
                     }
-                    //sendText("Win");
                     Platform.runLater(()->display.setText("Your ships have been destroyed.. you've lost!"));
                     try{
                         Thread.sleep(1000);
@@ -519,14 +519,15 @@ public class Controller implements Initializable, Runnable {
                     enemyReceivedAttack = true;
                 }
 
+                //These if's associated with numbers handle the moves of the other player and make the changes pertaining to that move. The numbers are
+                //representative of the grid tiles (00 is row zero column zero, 01 is row zero column one, etc.)
                 if(input.equals("00")){
                     Platform.runLater(() ->playerButton00.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY)))));
 
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-
-                    //enemyButton00.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+                    
                     if(playerBoard.boardArray[0][0] == 8){
                         health--;
                         playerBoard.boardArray[0][0] = -1;
@@ -550,7 +551,6 @@ public class Controller implements Initializable, Runnable {
                         Thread.sleep(1000);
                     }catch(Exception e){}
 
-                    //enemyButton01.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
                     if(playerBoard.boardArray[0][1] == 8){
                         health--;
                         playerBoard.boardArray[0][1] = -1;
@@ -573,8 +573,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton02.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton02.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[0][2] == 8){
                         health--;
                         playerBoard.boardArray[0][2] = -1;
@@ -597,8 +596,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton03.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton03.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[0][3] == 8){
                         health--;
                         playerBoard.boardArray[0][3] = -1;
@@ -621,8 +619,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton04.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton04.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[0][4] == 8){
                         health--;
                         playerBoard.boardArray[0][4] = -1;
@@ -645,8 +642,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton10.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton10.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[1][0] == 8){
                         health--;
                         playerBoard.boardArray[1][0] = -1;
@@ -669,8 +665,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton11.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton11.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[1][1] == 8){
                         health--;
                         playerBoard.boardArray[1][1] = -1;
@@ -693,8 +688,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton12.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton12.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[1][2] == 8){
                         health--;
                         playerBoard.boardArray[1][2] = -1;
@@ -741,8 +735,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton14.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton14.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[1][4] == 8){
                         health--;
                         playerBoard.boardArray[1][4] = -1;
@@ -765,8 +758,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton20.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton20.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[2][0] == 8){
                         health--;
                         playerBoard.boardArray[2][0] = -1;
@@ -789,8 +781,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton21.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton21.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[2][1] == 8){
                         health--;
                         playerBoard.boardArray[2][1] = -1;
@@ -813,8 +804,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton22.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton22.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[2][2] == 8){
                         health--;
                         playerBoard.boardArray[2][2] = -1;
@@ -837,8 +827,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton23.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton23.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[2][3] == 8){
                         health--;
                         playerBoard.boardArray[2][3] = -1;
@@ -861,8 +850,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton24.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton24.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[2][4] == 8){
                         health--;
                         playerBoard.boardArray[2][4] = -1;
@@ -885,8 +873,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton30.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton30.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[3][0] == 8){
                         health--;
                         playerBoard.boardArray[3][0] = -1;
@@ -909,8 +896,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton31.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton31.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[3][1] == 8){
                         health--;
                         playerBoard.boardArray[3][1] = -1;
@@ -933,8 +919,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton32.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton32.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[3][2] == 8){
                         health--;
                         playerBoard.boardArray[3][2] = -1;
@@ -957,8 +942,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton33.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton33.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[3][3] == 8){
                         health--;
                         playerBoard.boardArray[3][3] = -1;
@@ -981,8 +965,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton34.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton34.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[3][4] == 8){
                         health--;
                         playerBoard.boardArray[3][4] = -1;
@@ -1005,8 +988,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton40.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton40.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[4][0] == 8){
                         health--;
                         playerBoard.boardArray[4][0] = -1;
@@ -1029,8 +1011,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton41.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton41.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[4][1] == 8){
                         health--;
                         playerBoard.boardArray[4][1] = -1;
@@ -1053,8 +1034,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton42.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton42.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[4][2] == 8){
                         health--;
                         playerBoard.boardArray[4][2] = -1;
@@ -1077,8 +1057,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton43.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton43.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[4][3] == 8){
                         health--;
                         playerBoard.boardArray[4][3] = -1;
@@ -1101,8 +1080,7 @@ public class Controller implements Initializable, Runnable {
                     try{
                         Thread.sleep(1000);
                     }catch(Exception e){}
-                    //playerButton44.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
-                    //enemyButton44.setBackground((new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY))));
+
                     if(playerBoard.boardArray[4][4] == 8){
                         health--;
                         playerBoard.boardArray[4][4] = -1;
@@ -1124,7 +1102,8 @@ public class Controller implements Initializable, Runnable {
         }
     }
 
-
+    //This method sends a message to the server which is relayed to the other player. The messages sent are interpreted by the list of if statements
+    //above.
     public void sendText(String message){
         try{
             out.writeBytes(message + "\n");
@@ -1136,7 +1115,8 @@ public class Controller implements Initializable, Runnable {
         }
     }
 
-
+    //This method initializes the player/enemy board with initial values. The button arrays are directly associated with the buttons
+    //on the board to allow for easy access.
     public void setUp(){
         playerButtonArray[0][0] = playerButton00;
         playerButtonArray[0][1] = playerButton01;
@@ -1198,7 +1178,7 @@ public class Controller implements Initializable, Runnable {
         }
     }
 
-
+    //This class represents each ship, both player and enemy. It keeps track of data directly related to these ships.
     public static class Ship {
 
         public int shipType;
@@ -1228,13 +1208,14 @@ public class Controller implements Initializable, Runnable {
         }
     }
 
+    //This class represents the two game boards, both player and enemy. It keeps track of data associated with each board.
     public static class Board {
         public int ships = 2;
         public int[][] boardArray = new int[5][5];
         private boolean enemy = false;
         public boolean shipsPlaced = false;
 
-
+        //constructor
         public Board(boolean enemy){
             this.enemy = enemy;
 
@@ -1248,6 +1229,7 @@ public class Controller implements Initializable, Runnable {
 
         }
 
+        //this method handles the placing of ships.
         public boolean placeShip(Ship ship, int x, int y){
             if(boardArray[x][y] == 0) {
                 boardArray[x][y] = 5;
@@ -1261,6 +1243,7 @@ public class Controller implements Initializable, Runnable {
         }
     }
 
+    //This method drives the way ships are handled during the game, as well as handles the changes to the boards upon placement.
     public void placeShips() {
         AtomicInteger shipsPlaced = new AtomicInteger(0);
         AtomicBoolean shipPlacementComplete = new AtomicBoolean(false);
@@ -1276,7 +1259,7 @@ public class Controller implements Initializable, Runnable {
         display.setText("Place your ships by clicking your board! Press the check box to switch between vertical " +
                 "and horizontal placement.");
 
-
+        //handles the vertical placement check box that allows vertical ship placement.
         verticalCheckBox.setOnMouseClicked(event20 -> {
             if (vertical.get() == false) vertical.set(true);
             else {
@@ -1284,6 +1267,9 @@ public class Controller implements Initializable, Runnable {
             }
         });
 
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        //All mouse events below handle the board state during the placement of ships.
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         playerButton00.setOnMouseMoved(event3 -> {
             if (mouseMoved.get() == true && shipsPlaced.get() != 2) {
                 for (int i = 0; i < 5; i++) {
@@ -3211,18 +3197,26 @@ public class Controller implements Initializable, Runnable {
         });
 
     }
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    //End mouse events based on ship placement
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
+    //This method is invoked upon the start of the game. It drives the setup and ship placement, as well as keeps
+    //track of information related to the game setup, such as who goes first.
     public void startGame(){
+        
+        //Call setUp method to initialize values
         setUp();
 
-
+        //Create board objects
         playerBoard = new Board(false);
         enemyBoard = new Board(true);
-
+    
+        //Call placeShips to handle the placement of ships
         placeShips();
 
-
+        //When the confirm ship placement button is clicked, check if
+        //both ships are placed, and if so, start.
         confirmShipPlacementButton.setOnMouseClicked(event10 ->{
             if(playerBoard.shipsPlaced == false){
                 display.setText("Finish placing your ships!");
@@ -3275,6 +3269,7 @@ public class Controller implements Initializable, Runnable {
 
                 display.setText("The battle has started!");
 
+                //Start the timeline that handles the gameplay
                 timeline.play();
 
             }
@@ -3282,10 +3277,10 @@ public class Controller implements Initializable, Runnable {
     }
 
 
-
+    //This is the first method from Controller that is invoked upon running Main (by default).
+    //It forces both players to be connected before commencing the game setup.
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
 
         startButton.setOnMouseClicked((new EventHandler<MouseEvent>(){
             @Override
@@ -3306,10 +3301,9 @@ public class Controller implements Initializable, Runnable {
 
                 display.setText("Opponent found! Starting game...");
 
+                //call startGame to begin setUp and ship placement once both players are connected.
                 startGame();
                 startButton.setVisible(false);
-
-
             }
         }));
     }
