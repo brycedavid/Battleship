@@ -1,3 +1,5 @@
+//Author: Bryce Landry
+
 package Battleship;
 
 import javafx.animation.KeyFrame;
